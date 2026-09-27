@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Germani.dev - pro idiot">
+    <title>Germani.dev</title>
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --bg-color: #0f172a;
+            /* Dark Slate */
+            --card-bg: #1e293b;
+            /* Lighter Slate */
+            --text-main: #e2e8f0;
+            /* Off-white */
+            --text-muted: #94a3b8;
+            /* Grey */
+            --accent: #38bdf8;
+            /* Light Blue */
+            --font-main: 'Courier New', Courier, monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* --- LAYOUT CONTAINERS --- */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* --- HEADER / HERO --- */
+        header {
+            margin-bottom: 60px;
+            border-left: 4px solid var(--accent);
+            padding-left: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .role {
+            color: var(--accent);
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .bio {
+            color: var(--text-muted);
+            margin-top: 15px;
+            max-width: 600px;
+        }
+
+        /* --- SECTIONS --- */
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            border-bottom: 1px solid var(--card-bg);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        /* --- SKILLS TAGS --- */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+        }
+
+        .skill-tag {
+            background: var(--card-bg);
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            border: 1px solid #334155;
+        }
+
+        /* --- PROJECT CARDS --- */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.2s ease;
+            border: 1px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: var(--accent);
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        .card-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 0.85rem;
+            margin-right: 15px;
+            border-bottom: 1px dotted var(--accent);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            margin-top: 80px;
+            border-top: 1px solid var(--card-bg);
+            padding-top: 20px;
+        }
+
+        .social-links a {
+            color: var(--accent);
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        /* --- MOBILE TWEAKS --- */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 20px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>[Germani]</h1>
+            <p class="role">&lt; Full Stack Dumbass /&gt;</p>
+            <p class="bio">
+                I build barely accessible, pixel-imperfect, and anti-performant web and non web bullshit.
+                Currently focused on whatever i want to do.
+            </p>
+        </header>
+
+        <section id="skills">
+            <h2>Tech Stack</h2>
+            <ul class="skills-list">
+                <li class="skill-tag">Python</li>
+                <li class="skill-tag">C#</li>
+                <li class="skill-tag">JavaScript</li>
+                <li class="skill-tag">Node.js</li>
+                <li class="skill-tag">SQL / Postgres</li>
+                <li class="skill-tag">Docker</li>
+                <li class="skill-tag">Git</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Selected Bullshit</h2>
+            <div class="project-grid">
+
+                <article class="card">
+                    <h3>CatAPI</h3>
+                    <p>A nice and very useful API that serves you random images of my cat from a Google Photos album.
+                    </p>
+                    <div class="card-links">
+                        <a href="https://github.com/s1522711/catapi-google-golang">View Code</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <h3>Complaints</h3>
+                    <p>A self-hosted complaints form with email forwarding, two-way messaging, dark mode, and an admin
+                        panel.</p>
+                    <div class="card-links">
+                        <a href="https://github.com/s1522711/complaints">View Code</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <h3>Kosher-Linux</h3>
+                    <p>this small thing automatically turns off your computer if you try to turn it on during Shabbat.
+                    </p>
+                    <div class="card-links">
+                        <a href="https://github.com/s1522711/Kosher-Linux">View Code</a>
+                        <a href="https://aur.archlinux.org/packages/kosherlinux-git">Get on AUR</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>Nukem</h3>
+                    <p>A revolutionary nuclear shopping experience!</p>
+                    <div class="card-links">
+                        <a href="https://github.com/s1522711/nukem-next">View Code</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>SnappyShare</h3>
+                    <p>secure, visually stunning, and lightweight temporary file sharing web application.</p>
+                    <div class="card-links">
+                        <a href="https://github.com/s1522711/snappyshare">View Code</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>JBS 2025: Definitive Edition</h3>
+                    <p>Using the best next generation in president simulation technology!</p>
+                    <div class="card-links">
+                        <a href="https://github.com/s1522711/JBS2025">View Code</a>
+                        <a href="https://s1522711.itch.io/jbs25">Play Now!</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <footer>
+            <div class="social-links">
+                <a href="mailto:germani@germani.dev">Email</a>
+                <a href="https://github.com/s1522711">GitHub</a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Rickroll</a>
+            </div>
+            <p>&copy; 2026 Germani. Built with HTML & CSS.</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>
